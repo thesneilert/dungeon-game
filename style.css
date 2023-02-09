@@ -96,6 +96,7 @@ button:hover {
 
 /*------------- BUTTONS & POSITIONG -------------*/
 
+/*Room A*/
 .goToA #button-B {
   position: absolute;
   top: -480px;
@@ -110,17 +111,149 @@ button:hover {
   animation: fadeInOutBtn 1s ease-in-out forwards;
 }
 
+/*Room B*/
 .goToB #button-C {
+  position: absolute;
+  top: -258px;
+  left: 420px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToB #button-A {
+  position: absolute;
+  top: -60px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+/*Room C*/
+.goToC #button-B {
+  position: absolute;
+  top: -258px;
+  left: 20px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToC #button-D {
+  position: absolute;
+  top: -258px;
+  left: 420px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+/*Room D*/
+.goToD #button-J {
+  position: absolute;
+  top: -258px;
+  left: 420px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToD #button-E {
+  position: absolute;
+  top: -60px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToD #button-C {
+  position: absolute;
+  top: -258px;
+  left: 20px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+/*Room E*/
+
+.goToE #button-F {
+  position: absolute;
+  top: -60px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToE #button-D {
+  position: absolute;
+  top: -480px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+/*Room F*/
+
+.goToF #button-E {
+  position: absolute;
+  top: -480px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToF #button-G {
+  position: absolute;
+  top: -258px;
+  left: 20px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+/*Room G*/
+
+.goToG #button-F {
+  position: absolute;
+  top: -258px;
+  left: 420px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToG #button-H {
+  position: absolute;
+  top: -258px;
+  left: 20px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+/*Room G*/
+
+.goToH #button-G {
     position: absolute;
     top: -258px;
     left: 420px;
     animation: fadeInOutBtn 1s ease-in-out forwards;
   }
   
-  .goToB #button-A {
+  .goToH #button-A {
     position: absolute;
-    top: -60px;
+    top: -480px;
     left: 220px;
     animation: fadeInOutBtn 1s ease-in-out forwards;
   }
   
+/*Room J*/
+
+.goToJ #button-D {
+    position: absolute;
+    top: -258px;
+    left: 20px;
+    animation: fadeInOutBtn 1s ease-in-out forwards;
+  }
+  
+  .goToJ #button-finish {
+    position: absolute;
+    top: -258px;
+    left: 220px;
+    animation: fadeInOutBtn 1s ease-in-out forwards;
+    cursor: pointer;
+  }
+
+/*
+North   top: -480px;
+        left: 220px;
+
+South   top: -60px;
+        left: 220px;
+
+West    top: -258px;
+        left: 20px;
+
+East    top: -60px;
+        left: 220px;
+*/
