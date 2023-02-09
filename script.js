@@ -1,5 +1,7 @@
 // ----- MODEL -----
-
+var chestState = 0;
+var goldReward = 0;
+var goldWallet = 0;
 
 // ----- VIEW -----
 
@@ -8,7 +10,7 @@ function goToA() {
     document.getElementById("appPicture").innerHTML = /*html*/`
     <img src=dungeon-pictures/room_a.png></img>
     `;
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementById("appText").innerHTML += /*html*/`
         You are in room A. <br>The room has 2 exits. <br>Choose one to proceed.
         <div class="goToA">
@@ -30,7 +32,7 @@ function goToB() {
     <button id="button-A" onclick="goToA()">Go to A</button>
     <div>
     `;
-    
+
 }
 
 function goToC() {
@@ -58,6 +60,9 @@ function goToD() {
     <button id="button-C" onclick="goToC()">Go to C</button>
     <div>
     `;
+    //make chest dissapear again
+    var buttonFinish = document.getElementById("button-finish");
+    buttonFinish.style.display = "none";
 }
 
 function goToE() {
@@ -116,16 +121,65 @@ function goToJ() {
     document.getElementById("appPicture").innerHTML = /*html*/`
     <img src=dungeon-pictures/room_j.png></img>
     `;
-    document.getElementById("appPicture").innerHTML = /*html*/`
-    <img src=chest-pictures/closed.png  id="button-finish" onclick="goToFinish()"></img>
-    `;
     document.getElementById("appText").innerHTML = /*html*/`
     You are in the final room. <br>You find a treasure Chest!! <br>Click to see if there is any reward.
     <div class="goToJ">
     <button id="button-D" onclick="goToD()">Go to D</button>
     <div>
     `;
+    //chest
+    document.getElementById("appChest").innerHTML = /*html*/`
+    <img src=chest-pictures/closed.png  id="button-finish" onclick="changeChestImage()"></img>
+    `;
+    //place chest randomly
+    var buttonFinish = document.getElementById("button-finish");
+    buttonFinish.style.top = (Math.floor(Math.random() * 250) + 100) + "px";
+    buttonFinish.style.left = (Math.floor(Math.random() * 300) + 100) + "px";
+    buttonFinish.style.display = "block";
 }
+//change chest image on click
+function changeChestImage() {
+    var buttonFinish = document.getElementById("button-finish");
+    var buttonD = document.getElementById("button-D");
+
+    if (chestState === 0) {
+        chestState++;
+        buttonD.style.display = "none";
+        setInterval(function () {
+            if (chestState === 1) {
+                buttonFinish.src = "chest-pictures/opened.png";
+                chestState++;
+            } else if (chestState === 2) {
+                buttonFinish.src = "chest-pictures/more_opened.png";
+                chestState++;
+            } else if (chestState === 3) {
+                buttonFinish.src = "chest-pictures/fully_opened.png";
+                chestState++;
+            } else if (chestState === 4) {
+                buttonFinish.src = "chest-pictures/fully_opened.png";
+                chestState++;
+                //gives a random reward between 10 and 100
+                goldReward = (Math.floor(Math.random() * 99) + 9)
+                //calculates together you total gold amount after reward
+                goldWallet = goldWallet + goldReward
+                //appText show what reward you got and says congrats
+                document.getElementById("appText").innerHTML = /*html*/`
+              <div class="reward-text">You found ${goldReward} gold coins, congratulation!</div>
+              <br>You now have a total of ${goldWallet} gold coins.
+              `;
+              //reward amount popup over chest
+                var appYouWin = document.getElementById("appYouWin");
+                appYouWin.innerHTML = /*html*/`
+              +${goldReward}
+              `;
+                appYouWin.style.left = (buttonFinish.offsetLeft + buttonFinish.offsetWidth / 2.1 - appYouWin.offsetWidth / 2) + "px";
+                appYouWin.style.top = (buttonFinish.offsetTop - -20 - appYouWin.offsetHeight) + "px";
+            }
+        }, 500);
+    }
+}
+
+
 
 // ----- CONTROLLER -----
 
@@ -139,15 +193,15 @@ document.getElementById("button-G").style.display = "none";
 document.getElementById("button-H").style.display = "none";
 document.getElementById("button-J").style.display = "none";
 
-setTimeout(function() {
-document.getElementById("button-A").style.display = "block";
-document.getElementById("button-B").style.display = "block";
-document.getElementById("button-C").style.display = "block";
-document.getElementById("button-D").style.display = "block";
-document.getElementById("button-E").style.display = "block";
-document.getElementById("button-F").style.display = "block";
-document.getElementById("button-G").style.display = "block";
-document.getElementById("button-H").style.display = "block";
-document.getElementById("button-J").style.display = "block";
+setTimeout(function () {
+    document.getElementById("button-A").style.display = "block";
+    document.getElementById("button-B").style.display = "block";
+    document.getElementById("button-C").style.display = "block";
+    document.getElementById("button-D").style.display = "block";
+    document.getElementById("button-E").style.display = "block";
+    document.getElementById("button-F").style.display = "block";
+    document.getElementById("button-G").style.display = "block";
+    document.getElementById("button-H").style.display = "block";
+    document.getElementById("button-J").style.display = "block";
 
 }, 1000);

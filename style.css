@@ -68,10 +68,30 @@ button:hover {
 
 #appText {
   padding: 15px;
+  z-index: 1;
 }
 
 #appPicture img {
   animation: fadeInOutPicture 2s ease-in-out forwards;
+}
+
+#button-finish {
+    position: absolute;
+    z-index: 2;
+    width: 20%;
+    cursor: pointer;
+}
+
+#appYouWin{
+  position: absolute;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+  color: #ffbf00;
+  font-size: 15px;
+}
+
+.reward-text{
+  color:#b58900;
+  font-size: 18px;
 }
 
 /*------------- ANIMATIONS -------------*/
