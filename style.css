@@ -1,9 +1,30 @@
+/*------------- MAIN -------------*/
 body {
     background-color: #1c1c1c;
     color: #cccccc;
     justify-content: center;
 }
 
+button{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 2px 10px;
+    height: 21px;
+    border: none;
+    color: #cccccc;
+    background-color: rgb(87, 87, 90);
+    transition: background-color 0.100s ease, color 0.100s ease;
+}
+
+button:hover {
+    background-color: #b58900;
+}
+
+
+
+/*------------- APP -------------*/
 .windowBox {
     background-color: rgba(0,0,0,0.5);
     width: 500px;
@@ -42,4 +63,25 @@ body {
     position: relative;
     left: 50%;
     transform: translate(150%, 0%);
+}
+
+#appText{
+    padding: 15px
+}
+
+
+
+/*------------- ANIMATIONS -------------*/
+
+#appPicture img {
+    animation: fadeInOutPicture 2s ease-in-out forwards;
+}
+
+@keyframes fadeInOutPicture {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
