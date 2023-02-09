@@ -1,90 +1,126 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 /*------------- MAIN -------------*/
 body {
-    background-color: #1c1c1c;
-    color: #cccccc;
-    justify-content: center;
-    font-family: 'DotGothic16', sans-serif;
+  background-color: #1c1c1c;
+  color: #828282;
+  justify-content: center;
+  font-family: "DotGothic16", sans-serif;
 }
 
-button{
-    display: inline-block;
-    outline: none;
-    cursor: pointer;
-    border-radius: 3px;
-    padding: 2px 10px;
-    height: 21px;
-    border: none;
-    color: #cccccc;
-    background-color: rgb(87, 87, 90);
-    transition: background-color 0.100s ease, color 0.100s ease;
+button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 2px 10px;
+  height: 21px;
+  border: none;
+  color: #cccccc;
+  background-color: rgb(53, 53, 53);
+  transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 button:hover {
-    background-color: #b58900;
+  background-color: #b58900;
 }
-
-
 
 /*------------- APP -------------*/
 .windowBox {
-    background-color: rgba(0,0,0,0.5);
-    width: 500px;
-    height: 600px;
-    border-radius: 4px;
-    box-shadow: 0px 6px 19px -4px rgba(0,0,0,0.75);
-    padding: 20px;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, -0%);
-  }
-
-.pictureFrame{
-    background-color: rgba(255, 255, 255, 0.02);
-    width: 500px;
-    height: 480px;
-    border-radius: 4px;
-    box-shadow: 0px 6px 19px -4px rgba(0,0,0,0.75);
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 500px;
+  height: 600px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -0%);
 }
 
-.roomText{
-    background-color: rgba(255, 255, 255, 0.02);
-    width: 500px;
-    height: 100px;
-    border-radius: 4px;
-    box-shadow: 0px 6px 19px -4px rgba(0,0,0,0.75);
-    position: relative;
-    left: 50%;
-    transform: translate(-50%, 20%);
+.pictureFrame {
+  background-color: rgba(255, 255, 255, 0.02);
+  width: 500px;
+  height: 480px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
 }
 
-.roomNumber{
+.roomText {
+  background-color: rgba(255, 255, 255, 0.02);
+  width: 500px;
+  height: 100px;
+  border-radius: 4px;
+  box-shadow: 0px 6px 19px -4px rgba(0, 0, 0, 0.75);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.roomNumber {
   /*background-color: red;  */
-    width: 100px;
-    height: 100px;
-    position: relative;
-    left: 50%;
-    transform: translate(150%, 0%);
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  transform: translate(150%, 0%);
 }
 
-#appText{
-    padding: 15px
+#appText {
+  padding: 15px;
 }
 
-
+#appPicture img {
+  animation: fadeInOutPicture 2s ease-in-out forwards;
+}
 
 /*------------- ANIMATIONS -------------*/
 
-#appPicture img {
-    animation: fadeInOutPicture 2s ease-in-out forwards;
+@keyframes fadeInOutPicture {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes fadeInOutPicture {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+@keyframes fadeInOutBtn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
+/*------------- BUTTONS & POSITIONG -------------*/
+
+.goToA #button-B {
+  position: absolute;
+  top: -480px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToA #button-H {
+  position: absolute;
+  top: -60px;
+  left: 220px;
+  animation: fadeInOutBtn 1s ease-in-out forwards;
+}
+
+.goToB #button-C {
+    position: absolute;
+    top: -258px;
+    left: 420px;
+    animation: fadeInOutBtn 1s ease-in-out forwards;
+  }
+  
+  .goToB #button-A {
+    position: absolute;
+    top: -60px;
+    left: 220px;
+    animation: fadeInOutBtn 1s ease-in-out forwards;
+  }
+  
