@@ -1,0 +1,45 @@
+body {
+    background-color: #1c1c1c;
+    color: #cccccc;
+    justify-content: center;
+}
+
+.windowBox {
+    background-color: rgba(0,0,0,0.5);
+    width: 500px;
+    height: 600px;
+    border-radius: 4px;
+    box-shadow: 0px 6px 19px -4px rgba(0,0,0,0.75);
+    padding: 20px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -0%);
+  }
+
+.pictureFrame{
+    background-color: rgba(255, 255, 255, 0.02);
+    width: 500px;
+    height: 480px;
+    border-radius: 4px;
+    box-shadow: 0px 6px 19px -4px rgba(0,0,0,0.75);
+}
+
+.roomText{
+    background-color: rgba(255, 255, 255, 0.02);
+    width: 500px;
+    height: 100px;
+    border-radius: 4px;
+    box-shadow: 0px 6px 19px -4px rgba(0,0,0,0.75);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+.roomNumber{
+  /*background-color: red;  */
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    transform: translate(150%, 0%);
+}
