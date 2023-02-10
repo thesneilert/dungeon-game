@@ -159,12 +159,12 @@ function changeChestImage() {
                 buttonFinish.src = "chest-pictures/fully_opened.png";
                 chestState++;
                 //gives a random reward between 10 and 100
-                goldReward = (Math.floor(Math.random() * 99) + 9)
+                goldReward = Math.floor(Math.random() * (100 - 10) + 10);
                 //calculates together you total gold amount after reward
                 goldWallet = goldWallet + goldReward
                 //appText show what reward you got and says congrats
                 document.getElementById("appText").innerHTML = /*html*/`
-              <div class="reward-text">You found ${goldReward} gold coins, congratulation!</div>
+              <div class="reward-text">You found ${goldReward} gold coins. Congratulation!</div>
               <br>You now have a total of ${goldWallet} gold coins.
               `;
               //reward amount popup over chest
