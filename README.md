@@ -16,7 +16,7 @@ Dungeon Game is a simple web-based game where players navigate through various r
 2. Start in Room A.
 3. Choose an exit to move to the next room.
 4. Navigate through the dungeon by selecting different exits.
-5. Reach the final room <details style="display:inline"><summary>(Spoiler: Room J)</summary>to find a treasure chest.</details>
+5. Reach the final room (Room J) to find a treasure chest.
 6. Click the chest to open it and receive a random gold reward.
 
 ## Project Structure
