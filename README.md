@@ -26,7 +26,7 @@ Dungeon Game is a simple web-based game where players navigate through various r
 ## Installation
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/dungeon-game.git
+   git clone https://github.com/thesneilert/dungeon-game.git
    ```
 2. Open the `index.html` file in your preferred web browser.
 
